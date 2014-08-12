@@ -12,7 +12,7 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
   #- echo "extension=mongo.so" >> /home/minion/.phpenv/versions/$(phpenv global)/etc/php.ini  
-   - echo "extension=mongo.so" >> '/home/minion/.phpenv/versions/5.4/etc/php.ini'
+  - echo "extension=mongo.so" >> '/home/minion/.phpenv/versions/5.4/etc/php.ini'
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/ConnectToMongoTest.php
   
