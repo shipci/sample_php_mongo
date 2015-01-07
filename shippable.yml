@@ -1,5 +1,5 @@
 language: php
-
+build_image: shippable/minv2:beta
 
 php: 
   #- 5.3
@@ -23,4 +23,4 @@ after_script:
   
 archive: true
 #cache: true
-build_image: shippable/minv2:beta
+#build_image: shippable/minv2:beta
