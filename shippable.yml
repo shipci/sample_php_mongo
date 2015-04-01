@@ -20,7 +20,11 @@ script:
 after_script:
   - cp README.md ./shippable
   
-  
+after_success:
+- echo "success"
+after_failure:
+- echo "failed"
+ 
 archive: true
 #cache: true
 #build_image: shippable/minv2:beta
