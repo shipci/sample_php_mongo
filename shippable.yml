@@ -1,6 +1,8 @@
 language: php
 #build_image: shippable/minv2:beta
-
+env:
+  global:
+    - APP_NAME=samplephpmongo
 php: 
   #- 5.3
   - 5.4
@@ -22,6 +24,8 @@ after_script:
   
 after_success:
 - echo "success"
+- git push -f git@heroku.com:$APP_NAME.git master
+
 after_failure:
 - echo "failed"
  
