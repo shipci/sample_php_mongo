@@ -20,12 +20,12 @@ before_script:
   
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/ConnectToMongoTest.php
-after_script:
-  - cp README.md ./shippable
+#after_script:
+ # - cp README.md ./shippable
   
 after_success:
 - echo "success"
-#- git push -f git@heroku.com:$APP_NAME.git master
+- git push -f git@heroku.com:$APP_NAME.git master
 
 after_failure:
 - echo "failed"
