@@ -25,7 +25,7 @@ after_script:
   
 after_success:
 - echo "success"
-- git push -f git@heroku.com:$APP_NAME.git master
+#- git push -f git@heroku.com:$APP_NAME.git master
 
 after_failure:
 - echo "failed"
